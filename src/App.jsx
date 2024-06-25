@@ -48,7 +48,7 @@ function App() {
     function callMap(item, index) {
         return (
             <ImageToggle
-                src={"/src/assets/" + item[0] + ".png"}
+                src={"src/assets/" + item[0] + ".png"}
                 alt={item[0]}
                 key={item[0]}
                 stats={stats}
