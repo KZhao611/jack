@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css'; // Import the CSS file for styling
+import '../App.css'; // Import the CSS file for styling
 
 function ImageToggle({ src, alt, stats, setStats, itemStats, checkboxes }) {
   const [isSelected, setIsSelected] = useState(false);

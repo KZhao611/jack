@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import ImageToggle from "./ImageToggle";
+import ImageToggle from "./components/ImageToggle";
 import "./App.css";
-import { starter, basic, boots, epic, legendary } from "./Items";
+import { starter, basic, boots, epic, legendary } from "./components/Items";
 
 function App() {
     const [stats, setStats] = useState(new Array(21).fill(0));
@@ -48,7 +48,7 @@ function App() {
     function callMap(item, index) {
         return (
             <ImageToggle
-                src={"src/assets/" + item[0] + ".png"}
+                src={"assets/" + item[0] + ".png"}
                 alt={item[0]}
                 key={item[0]}
                 stats={stats}
