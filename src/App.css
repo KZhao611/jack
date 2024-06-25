@@ -1,0 +1,56 @@
+.toggle-image {
+    cursor: pointer;
+    transition: border 0.3s;
+    margin: 6px;
+}
+
+.toggle-image.bad {
+    filter: grayscale(100%);
+}
+
+.toggle-image.selected {
+    border: 5px solid white; /* White border when selected */
+    transition-duration: 0s;
+    margin: 1px;
+    filter: none;
+}
+
+.vsc-initialized {
+    background-color: black;
+}
+
+.statName {
+    color: gray;
+    margin-left: 10px;
+}
+
+.statName.selected {
+    color: white;
+}
+
+#statContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#numStats {
+    color: white;
+    display: inline;
+}
+
+h2 {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.icon{
+    width: 15px;
+    height: 15px;
+}
