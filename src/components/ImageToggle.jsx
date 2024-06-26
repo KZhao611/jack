@@ -1,25 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css'; // Import the CSS file for styling
 
-function ImageToggle({ src, alt, stats, setStats, itemStats, checkboxes }) {
+function ImageToggle({ src, alt, stats, setStats, itemStats, checkboxes, clear }) {
   const [isSelected, setIsSelected] = useState(false);
 
   function changeStats(x){
     let newStats = [...stats]
     for(let e of itemStats){
-        newStats[e] += x
+      newStats[e] += x
     }
     setStats(newStats)
   }
 
-  const handleClick = () => {
-    setIsSelected(!isSelected);
+
+  useEffect(()=>{
     if(isSelected){
-        changeStats(-1)
+      handleClick()
+    }
+  }, [clear])
+
+  const handleClick = () => {
+    if(isSelected){
+      changeStats(-1)
     }
     else{
-        changeStats(1)
+      changeStats(1)
     }
+    setIsSelected(!isSelected);
   };
 
   function isBad(){

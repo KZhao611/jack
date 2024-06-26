@@ -1,5 +1,5 @@
 const starter = [
-    ["seal", [3, 8]],
+    ["seal", [3, 8], "dark seal"],
     ["tear", [15]],
     ["dring", [3, 8]],
     ["world", [8, 9, 16]],

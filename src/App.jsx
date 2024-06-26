@@ -48,7 +48,7 @@ function App() {
     function callMap(item, index) {
         return (
             <ImageToggle
-                src={"assets/" + item[0] + ".png"}
+                src={"images/" + item[0] + ".png"}
                 alt={item[0]}
                 key={item[0]}
                 stats={stats}
@@ -94,14 +94,13 @@ function App() {
                 Grayscale
             </label>
 
-
             <div id="statContainer">{statNames.map(statMap)}</div>
             <p id="numStats">
                 Number of Stats:{" "}
                 <span style={{ color: getColor() }}>{numStats}</span>
             </p>
-            <p>green = common blue = rare purple = epic yellow = legendary</p>
-            <img className="icon" src="https://static.wikia.nocookie.net/leagueoflegends/images/1/17/Health_icon.png"></img>
+            <p>additional stats: green = 1    blue = 2    purple = 3   yellow = 4</p>
+            {/* <img className="icon" src="https://static.wikia.nocookie.net/leagueoflegends/images/1/17/Health_icon.png"></img> */}
 
             <h2>Starter</h2>
             {starter.map(callMap)}
