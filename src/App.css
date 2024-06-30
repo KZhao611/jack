@@ -17,9 +17,9 @@
 
 #root {
     background-color: black;
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: auto; */
 }
 
 .statName {
@@ -34,6 +34,18 @@
 #statContainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+}
+
+@media (max-width: 768px) { /* Adjust this value based on your needs */
+    #statContainer {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for mobile devices */
+    }
+}
+
+@media (max-width: 480px) { /* Further adjust for smaller screens */
+    #statContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller mobile devices */
+    }
 }
 
 #numStats {
